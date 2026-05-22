@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  
+  --color-bg-blue: var(--bg-blue);
+  --color-bg-red: var(--bg-red);
+  --color-bg-orange: var(--bg-orange);
+  --color-bg-green: var(--bg-green);
+  --color-bg-teal: var(--bg-teal);
+  --color-bg-purple: var(--bg-purple);
+
+  --color-brand-blue: #3b82f6;
+  --color-brand-pink: #f43f5e;
+  --color-brand-orange: #f97316;
+  --color-brand-yellow: #eab308;
+  --color-brand-navy: var(--brand-navy);
+}
+
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --ink: #f8fafc;
+  --ink-muted: #94a3b8;
+  --line: #334155;
+  --brand-navy: #f1f5f9;
+
+  --bg-blue: #40557b;
+  --bg-red: #b36d6d;
+  --bg-orange: #fec97e;
+  --bg-green: #4cec9a;
+  --bg-teal: #2d5a5a;
+  --bg-purple: #5b4a7a;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .card {
+  background-image: linear-gradient(to bottom right, rgba(255,255,255,0.02), transparent);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
